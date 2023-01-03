@@ -40,7 +40,7 @@ class TestUser(TestBasemodel):
         )
 
     def test_password(self):
-        """Tests the type of password."""
+        """Tests the type of password. """
         new = self.value()
         self.assertEqual(
             type(new.password),
