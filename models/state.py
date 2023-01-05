@@ -6,10 +6,13 @@ from sqlalchemy.orm import relationship
 
 from models.base_model import BaseModel, Base
 
+class State(BaseModel):
+       pass
 
-class Review(BaseModel, Base):
-    """ Review classto store review information """
-    __tablename__ = 'reviews'
+
+#class Review(BaseModel, Base):
+""" Review classto store review information """
+"""   __tablename__ = 'reviews'
     place_id = Column(
         String(60), ForeignKey('places.id'), nullable=False
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
@@ -18,4 +21,4 @@ class Review(BaseModel, Base):
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
     text = Column(
         String(1024), nullable=False
-    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
+    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else '' """
