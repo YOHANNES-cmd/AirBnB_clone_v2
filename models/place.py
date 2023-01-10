@@ -65,6 +65,11 @@ class Place(BaseModel, Base):
     longitude = Column(
         Float, nullable=True
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else 0.0
+    user = relationship('User', backref='place', foreign_keys="Place.user_id"
+    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else None
+
+    cities = relationship('City', backref='place', foreign_keys="Place.city_id"
+    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else None
     amenity_ids = []
     reviews = relationship(
         'Review',
