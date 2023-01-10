@@ -6,7 +6,7 @@ from sqlalchemy import Column
 from sqlalchemy import ForeignKey
 from sqlalchemy import String
 from sqlalchemy.orm import relationship
-
+import os
 
 class Review(BaseModel, Base):
     """Represents a review for a MySQL database.
