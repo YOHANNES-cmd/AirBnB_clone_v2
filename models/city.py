@@ -6,7 +6,7 @@ from sqlalchemy import Column
 from sqlalchemy import ForeignKey
 from sqlalchemy import String
 from sqlalchemy.orm import relationship
-
+import os
 
 class City(BaseModel, Base):
     """Represents a city for a MySQL database.
